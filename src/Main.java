@@ -83,16 +83,8 @@ public class Main {
     }
 
     public static int greaterThanAvg(int[] inputArray) {
-
-        double sum = 0;
-        double avg;
+        double avg = getAverage(inputArray);
         int count = 0;
-
-        for (int i = 0; i < inputArray.length - 1; i++) {
-            sum += inputArray[i];
-        }
-        avg = sum / inputArray.length;
-
         for (int i = 0; i < inputArray.length; i++) {
             if (inputArray[i] > avg) {
                 count++;
